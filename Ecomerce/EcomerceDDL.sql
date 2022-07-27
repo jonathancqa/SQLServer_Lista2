@@ -7,7 +7,7 @@ CREATE TABLE tb_usuarios(
 	Nome VARCHAR(45) NOT NULL,
 	Usuario VARCHAR(45) NOT NULL,
 	Senha VARCHAR(45) NOT NULL,
-	Documento VARCHAR(45)
+	Documento VARCHAR(45) NOT NULL
 );
 
 CREATE TABLE tb_produtos(
@@ -17,7 +17,7 @@ CREATE TABLE tb_produtos(
 	Valor FLOAT NOT NULL,
 	Estoque INT NOT NULL,
 	Categoria VARCHAR(255) NOT NULL CHECK(Categoria IN('cat1', 'cat2')),
-	Imagem VARCHAR(100) NOT NULL,
+	Imagem VARCHAR(100) NULL,
 );
 
 CREATE TABLE compras(

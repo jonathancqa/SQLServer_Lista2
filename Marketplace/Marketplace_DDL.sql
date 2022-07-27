@@ -8,7 +8,7 @@ CREATE TABLE tb_Usuarios(
 	Usuario VARCHAR(45) NOT NULL,
 	Senha VARCHAR(100) NOT NULL,
 	Tipo VARCHAR(255) NOT NULL CHECK(Tipo IN('CLI','ADM')),
-	Foto VARCHAR(100) NOT NULL
+	Foto VARCHAR(100) NULL
 );
 
 CREATE TABLE tb_Categoria(
@@ -21,7 +21,7 @@ CREATE TABLE tb_Produtos(
 	Produto VARCHAR(45) NOT NULL,
 	Descricao VARCHAR(100) NOT NULL,
 	Valor FLOAT NOT NULL,
-	Imagem VARCHAR(100) NOT NULL,
+	Imagem VARCHAR(100) NULL,
 	FK_Criador INT NOT NULL,
 	FK_Categorias INT NOT NULL,
 	FOREIGN KEY (FK_Categorias) REFERENCES tb_Categoria(Id)
